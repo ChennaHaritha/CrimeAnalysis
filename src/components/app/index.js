@@ -2,7 +2,7 @@ import React from "react";
 import Hello from "./hello";
 
 const App = () => (
-    <Hello name="world"></Hello>
+    <Hello name="crimes"></Hello>
 );
 
 export default App;
