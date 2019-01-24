@@ -1,8 +1,9 @@
 import React from "react";
-import Hello from "./hello";
+import Hello from "./home";
+import Home from "./home";
 
 const App = () => (
-    <Hello name="crimes"></Hello>
+    <Home name="crimes"></Home>
 );
 
 export default App;
