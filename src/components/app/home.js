@@ -73,47 +73,6 @@ const divStyle = {
    'margin-bottom': '15px'
    }
 
-   //<div className="container" >
-
-   /*
-         <nav className="navbar navbar-light bg-dark justify-content-between">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li style={{float:'right'}}> 
-                                <form className="form-inline">
-                                    <input className="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search"/>
-                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                                </form> 
-                            </li>
-                        </ul>
-                        </nav>
-
-        <div className="col-md-8 " >
-                        <nav className="navbar navbar-inverse">
-                            <div className="container-fluid">
-                                <div className="navbar-header">
-                                <a className="navbar-brand" href="#">WebSiteName</a>
-                                </div>
-                                <ul className="nav navbar-nav">
-                                <li className="active"><a href="#">Home</a></li>
-                                <li><a href="#">Page 1</a></li>
-                                <li><a href="#">Page 2</a></li>
-                                </ul>
-                                <form className="navbar-form navbar-left" action="/action_page.php">
-                                <div className="form-group">
-                                    <input type="text" class="form-control" placeholder="Search"/>
-                                </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
-                                </form>
-                            </div>
-                        </nav>
-                        </div>
-
-   */
-   
-
 class Home extends React.Component {
     render() {
         return (
@@ -137,7 +96,7 @@ class Home extends React.Component {
             <Nav >
             
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="./registerCrime">Register Crime</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
@@ -160,36 +119,18 @@ class Home extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem className="float-right">
-              <form className="navbar-form navbar-right" action="/action_page.php" >
+              <NavItem className="navbar-nav ml-auto" >
+              <form className="navbar-form" action="/action_page.php" >
                                 
-                                    <input type="text" className="form-control" placeholder="Search"/>
+                                    <input type="text" className="form-control" placeholder="Search" style={{marginLeft:'20px'}}/>
                                     </form>
                                     </NavItem>
                                     <NavItem>
-                                <button type="submit" className="btn btn-outline-success my-2 my-sm-0">Submit</button>
-                               
-                                
-                                
+                                <button type="submit" style={{marginLeft:'30px'}}className="btn btn-outline-success my-2 my-sm-0">Submit</button>
                                 </NavItem>
               </Nav>
           </Collapse>
         </Navbar>
-       
-        
-       
-                    
-
-                   
-                    
-
-                        <br/>
-                        
-
-                        
-                    
-                       
-                   
 
                     <div className="row" >
                         <div className="col-md-8 " style={containerStyle}>
