@@ -15,6 +15,8 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 
+import {Link} from "react-router-dom";
+
 const loginButton = {
     backgroundColor: '#4CAF50',
     color: 'white',
@@ -80,13 +82,7 @@ class Home extends React.Component {
             
                 <button style={loginButton}>Login</button>
                 
-                    <div className="row" style={rowMainStyling}>
-                        <center>
-                            <p style={heading}>CRIME ANALYSIS</p>
-                            </center>
-                            <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
-                    </div>
-
+                    
                
                 
                     <Navbar color="dark" light expand="md">
@@ -96,10 +92,13 @@ class Home extends React.Component {
             <Nav >
             
               <NavItem>
-                <NavLink href="./registerCrime">Register Crime</NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="/register">Register Crime</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/analyze">Analyze</NavLink>
               </NavItem>
              
               <UncontrolledDropdown nav inNavbar>
@@ -131,6 +130,14 @@ class Home extends React.Component {
               </Nav>
           </Collapse>
         </Navbar>
+
+        <div className="row" style={rowMainStyling}>
+                        <center>
+                            <p style={heading}>CRIME ANALYSIS</p>
+                            </center>
+                            <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
+                    </div>
+
 
                     <div className="row" >
                         <div className="col-md-8 " style={containerStyle}>

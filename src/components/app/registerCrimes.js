@@ -6,7 +6,7 @@ class RegisterCrime extends React.Component {
     return (
       <Form>
         <FormGroup>
-          <Label for="exampleEmail">Email</Label>
+          <Label for="CrimeType">CrimeType</Label>
           <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
         </FormGroup>
         <FormGroup>
