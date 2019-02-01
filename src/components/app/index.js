@@ -11,6 +11,7 @@ import {
     Switch,
     Redirect,
 } from 'react-router-dom'
+import Maincomp from "./maincomp";
 
 
 class App extends React.Component{
@@ -19,6 +20,7 @@ class App extends React.Component{
             <Router>
                 <div>
                  <Route exact path="/" component={Home} />
+                 
                  <Route path="/register" component={RegisterCrime} />
                  <Route path="/analyze" component={Invest} />
                  </div>

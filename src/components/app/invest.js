@@ -17,17 +17,15 @@ const centered={
     transform: 'translate(-50%, -50%)',
     color:'Red'
   }
+
   const image={
     width:'68%',
     height:'110%',
     borderRadius:'360px',
-    
     paddingRight:'15px',
     borderStyle: 'solid',
+   }
    
-    
-    
-  }
   const heading={
       textAlign:'center',
       backgroundColor:'gray',
