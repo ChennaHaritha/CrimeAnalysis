@@ -72,7 +72,7 @@ class Header extends React.Component {
                         <Collapse navbar>
                             <Nav >
                                 <NavItem>
-                                    <NavLink href="/" activeClassName={{color:"red"}}>Home</NavLink>
+                                    <NavLink href="/" >Home</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink href="/register">Register Crime</NavLink>

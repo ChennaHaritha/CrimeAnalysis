@@ -23,7 +23,7 @@ class App extends React.Component{
             <Router>
                 <div>
                  <Route exact path="/" component={Root} >
-                 <Route path="/register" component={RegisterCrime} />
+                 
                     
                     
                  </Route>
