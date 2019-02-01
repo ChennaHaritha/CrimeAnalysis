@@ -22,7 +22,7 @@ class App extends React.Component{
         return(
             <Router>
                 <div>
-                 <Route exact path="/" component={Root} >
+                 <Route exact path="/" component={Header} >
                  
                     
                     

@@ -64,9 +64,15 @@ class Home extends React.Component {
                 <div className="row" >
                         <div className="col-md-8 " style={containerStyle}>
                             <div className="row">
-                                <Card></Card>
-                                <Card></Card>
-                                <Card></Card>   
+                                <Card 
+                                    head="Heading"
+                                    desc="This is from home page"></Card>
+                                <Card 
+                                    head="Heading"
+                                    desc=""></Card>
+                                <Card 
+                                    head="Heading"
+                                    desc=""></Card>   
                             </div>
                         </div>
 
