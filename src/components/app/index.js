@@ -15,6 +15,7 @@ import {
     
 } from 'react-router-dom'
 import { IndexRoute } from 'react-router';
+import MoreDetails from "./MoreDetails";
 
 
 class App extends React.Component{
@@ -22,11 +23,9 @@ class App extends React.Component{
         return(
             <Router>
                 <div>
-                 <Route exact path="/" component={Header} >
-                 
-                    
-                    
+                 <Route exact path="/" component={Root} >    
                  </Route>
+                 <Route exact path="/moredetails" component={MoreDetails}/>
                  <Route path="/register" component={RegisterCrime} />
                     <Route path="/analyze" component={Invest} />
                  </div>
