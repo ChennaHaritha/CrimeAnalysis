@@ -2,34 +2,6 @@ import React from "react";
 import crime1 from "./images/crime1.jpg";
 import bargraph from "./images/bargraph.png";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
-
-import {Link} from "react-router-dom";
-
-const loginButton = {
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    padding: '14px 20px',
-    margin: '8px 0',
-    cursor: 'pointer',
-    paddingRight: '20px',
-    borderRadius: '5px',
-    boarder:'50px',
-    float:'right',
-    margin:'30px'
-    
-};
 
 const main= {
     margin:'30px'
@@ -41,7 +13,7 @@ const heading={
     lineHeight: '40px',
     textAlign: 'center',
     marginLeft:'300px',
-    marginTop:'150px',
+    marginTop:'30px',
     paddingBottom:'50px'
 }
 const marequeStyle={
@@ -52,7 +24,7 @@ const marequeStyle={
 
 
 const rowMainStyling = {
-    marginTop: '40px'
+    marginTop: '10px'
 
 }
 
@@ -79,58 +51,6 @@ class Home extends React.Component {
     render() {
         return (
             <div style={main}>     
-            
-                <button style={loginButton}>Login</button>
-                
-                    
-               
-                
-                    <Navbar color="dark" light expand="md">
-         
-        
-          <Collapse navbar>
-            <Nav >
-            
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/register">Register Crime</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/analyze">Analyze</NavLink>
-              </NavItem>
-             
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <NavItem className="navbar-nav ml-auto" >
-              <form className="navbar-form" action="/action_page.php" >
-                                
-                                    <input type="text" className="form-control" placeholder="Search" style={{marginLeft:'20px'}}/>
-                                    </form>
-                                    </NavItem>
-                                    <NavItem>
-                                <button type="submit" style={{marginLeft:'30px'}}className="btn btn-outline-success my-2 my-sm-0">Submit</button>
-                                </NavItem>
-              </Nav>
-          </Collapse>
-        </Navbar>
-
         <div className="row" style={rowMainStyling}>
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
