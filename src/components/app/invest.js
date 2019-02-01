@@ -23,9 +23,15 @@ const centered={
     height:'110%',
     borderRadius:'360px',
     paddingRight:'15px',
+<<<<<<< HEAD
     borderStyle: 'solid', 
   }
 
+=======
+    borderStyle: 'solid',
+   }
+   
+>>>>>>> 8f59b27de8581acdc5456c8602c8c0127c0335fd
   const heading={
       textAlign:'center',
       backgroundColor:'gray',
