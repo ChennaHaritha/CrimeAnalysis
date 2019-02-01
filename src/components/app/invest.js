@@ -17,44 +17,42 @@ const centered={
     transform: 'translate(-50%, -50%)',
     color:'Red'
   }
+
   const image={
     width:'68%',
     height:'110%',
     borderRadius:'360px',
-    
     paddingRight:'15px',
-    borderStyle: 'solid',
-   
-    
-    
+    borderStyle: 'solid', 
   }
+
   const heading={
       textAlign:'center',
       backgroundColor:'gray',
-
   }
+
   const image1={
-   
     width:'70%',
     height:'140%',
     borderRadius:'360px',
     borderStyle: 'solid',
-    minHeight: '1px'
-    
+    minHeight: '1px' 
   }
+
   const pad={
     paddingTop: '15rem',
     paddingBottom: '1rem',
   }
+
   const buttonposition={
     position: 'absolute',
     fontSize: '25px',
     bottom: '0.1%',
     right:'50%',
     width:'200px',
-    left:'120px',
-    
+    left:'120px', 
   }
+  
   const centered1={
     position: 'absolute',
     top: '70%',
