@@ -1,63 +1,118 @@
 import React from "react";
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
-const fa={
-    padding: '20px',
-    fontSize: '30px',
-    width: '30px',
-    textAlign: 'center',
-    textDecoration: 'none',
-    margin: '5px 2px',
-    borderRadius: '50%'
-  }
+
+
+
+let fa={
+
+  position:'relative',
+	borderRadius:'60%',
+   
+    
+  fontSize:'40px',
+  cursor:'pointer',
   
+  color:'white'
+  }
+  const but={
+    borderRadius:'150%',
+    width:'160%',
+    height:'160%',
+   
+   
+  }
+  const but1={
+    borderRadius:'150%',
+    width:'110%',
+    height:'110%',
+  }
+  const but2={
+    borderRadius:'150%',
+    width:'90%',
+    height:'100%',
+  }
+  const but3={
+    borderRadius:'150%',
+    width:'120%',
+    height:'110%',
+  }
   /*const fa:hover{
       opacity: '0.7'
   }*/
   
-  const facebook ={
-    background: '#3B5998',
-    color: 'white'
+  let facebook ={
+    backgroundColor: '#3b5998',
+    
+    
   }
   
-  const twitter={
-    background: '#55ACEE',
-    color: 'white',
-  }
+  let twitter={
+    backgroundColor: 'DodgerBlue',
   
-  const google={
-    background: '#dd4b39',
-    color: 'white'
   }
+ let google={
+    backgroundColor: 'red',
+    
+  }
+let linkedin={
+  backgroundColor:'#4875B4'
+}
 
 
-
-
-
+const pagefooter={
+  
+  backgroundColor:'Gray'
+}
+const unorderedlist={
+  textAlign:'center',
+  paddingTop:'20px',
+  
+}
+const listpad={
+  paddingRight:'20px'
+}
+const listpad1={
+  paddingRight:'30px'
+}
 class Footer extends React.Component {
     render() {
         return (
-            <div className="container"> 
-          <div className="row" style={fa}>
-           <h5>@CopyRight reserved</h5>
-           <a href="#" className="fa fa-facebook-official" style={facebook}>f</a>
-           <a href="#" className="fa fa-github" style={twitter}></a>
-           <a href="#" className="fa fa-google-plus-official" style={google}>G</a>
-            
-          </div>
         
-        
-      
-        <div className="text-center center-block">
-            <p className="txt-railway">@CopyRight reserved</p>
-            <br />
-                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" className="fa fa-facebook-square fa-3x social"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" className="fa fa-twitter-square fa-3x social"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" className="fa fa-google-plus-square fa-3x social"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" className="fa fa-envelope-square fa-3x social"></i></a>
-</div>
-   </div>
+      <footer className="page-footer " style={pagefooter}>
+      <div className="container" >
 
+      <ul className="list-unstyled list-inline text-center" style={unorderedlist}>
+      <li className="list-inline-item" style={listpad1}>
+        <a className="btn-floating btn-fb mx-1"   style={{...fa, ...facebook}}>
+          <i className="fa fa-facebook" style={but} > </i>
+        </a>
+      </li>
+      <li className="list-inline-item" style={listpad}>
+        <a className="btn-floating btn-tw mx-1"    style={{...fa, ...twitter}}>
+          <i className="fa fa-twitter" style={but1}> </i>
+        </a>
+      </li>
+      <li className="list-inline-item" style={listpad}>
+        <a className="btn-floating btn-gplus mx-1"  style={{...fa, ...google}}>
+          <i className="fa fa-google-plus" style={but2}> </i>
+        </a>
+      </li>
+      <li className="list-inline-item" style={listpad}>
+        <a className="btn-floating btn-li mx-1"  style={{...fa, ...linkedin}}>
+          <i className="fa fa-linkedin" style={but3}> </i>
+        </a>
+      </li>
+      
+    </ul>
+    
+    </div>
+    
+    <div className="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> CrimeAnalysis.com</a>
+    </div>
+    
+
+    </footer>
 
         );
     }

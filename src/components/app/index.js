@@ -6,7 +6,8 @@ import Sign from "./sign";
 import Invest from "./invest";
 import Root from "./Root";
 import ViewMore from "./viewMore";
-import MoreDetails from "./MoreDetails"
+import MoreDetails from "./MoreDetails";
+import Footer from "./footer";
 
 import {
     BrowserRouter as Router,
