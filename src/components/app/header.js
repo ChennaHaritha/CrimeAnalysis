@@ -56,9 +56,9 @@ const main= {
 
 
 class Header extends React.Component {
-    onLogin(){
+    /*onLogin(){
         this.props.history.push("/register");
-    }
+    }*/
     render() {
         return (
             <div>  

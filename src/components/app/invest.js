@@ -8,81 +8,69 @@ import rape1 from "./images/rape1.jpg";
 import cybercrime1 from "./images/cybercrime1.jpg";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col, Container } from 'reactstrap';
+import Header from './header';
+
+
+const heading={
+  textAlign:'center',
+  backgroundColor:'gray',
+}
+
+
 
 const centered={
     position: 'absolute',
     top: '50%',
     left: '50%',
-    fontSize: '40px',
+    fontSize: '45px',
     transform: 'translate(-50%, -50%)',
     color:'Red'
   }
   
   const image={
-    width:'68%',
-    height:'110%',
-    borderRadius:'360px',
-    paddingRight:'15px',
+    width:'100%',
+    height:'400px',
+    borderRadius:'10%',
     borderStyle: 'solid' 
   }
 
-  const heading={
-      textAlign:'center',
-      backgroundColor:'gray',
-  }
+  
 
-  const image1={
-    width:'70%',
-    height:'140%',
-    borderRadius:'360px',
-    borderStyle: 'solid',
-    minHeight: '1px' 
-  }
-
-  const pad={
-    paddingTop: '15rem',
-    paddingBottom: '1rem',
-  }
-
+  
   const buttonposition={
     position: 'absolute',
-    fontSize: '25px',
-    bottom: '0.1%',
-    right:'50%',
-    width:'200px',
-    left:'120px', 
+    bottom: '10%', 
+    width:'35%',
+    height:'20%',
+    left:'20%', 
+    fontSize:'150%'
   }
   
-  const centered1={
-    position: 'absolute',
-    top: '70%',
-    left: '50%',
-    fontSize: '45px', 
-    transform: 'translate(-50%, -50%)',
-    color:'Red' 
-  }
+  
 
 class Invest extends React.Component {
     render() {
         return (
-            <div>
-            
-            <div>
-         <h1 style={heading}>CRIME DETAILS</h1>
+          <div>
+            <div >
+              <Header></Header>
+              <h1 style={heading}>CRIME DETAILS</h1>
+              <br/>
+              
          
-         <br/>
-     </div>
-<br/>
-     
-     
-<br/>
+                 <br/>
+                <br/>
+                
+            </div>
+            <div className="container">
             <div className="row">
+            
              <div className="col-md-4" >
              <img src={robbery4} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
               <div style={centered} ></div>
               
-             </div><br/>
+             </div>
 
              <div className="col-md-4">
              <img src={missing} alt="Snow" style={image} ></img>
@@ -97,23 +85,29 @@ class Invest extends React.Component {
              </div>
             </div>
 
+            <br></br>
+            <br></br>
+            <br></br>
+          
+
             <div className="row">
-             <div className="col-md-4" style={pad}>
-             <img src={stolen} alt="Snow" style={image1} ></img>
+             <div className="col-md-4">
+             <img src={stolen} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered1}></div>
+              <div style={centered}></div>
              </div><br/>
 
-             <div className="col-md-4" style={pad}>
-             <img src={rape1} alt="Snow" style={image1} ></img>
+             <div className="col-md-4">
+             <img src={rape1} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered1}></div>
+              <div style={centered}></div>
              </div>
 
-             <div className="col-md-4" style={pad}>
-             <img src={cybercrime1} alt="Snow" style={image1} ></img>
+             <div className="col-md-4">
+             <img src={cybercrime1} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered1}></div>
+              <div style={centered}></div>
+             </div>
              </div>
             </div>
 
