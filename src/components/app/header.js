@@ -1,5 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {withRouter} from 'react-router-dom';
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,
@@ -59,13 +60,18 @@ class Header extends React.Component {
     /*onLogin(){
         this.props.history.push("/register");
     }*/
+    nextPath(path) {
+        history.push(path);
+        console.log("hello")
+      }
+    
     render() {
         return (
             <div>  
                  <div>  
                     <button style={button} >&#8249;</button>
                     <button style={button}>&#8250;</button>
-                    <button style={loginbutton} >Login</button>
+                    <button style={loginbutton} onClick={() => this.nextPath('/register') }>Login</button>
                     
                 </div>
                 <div>

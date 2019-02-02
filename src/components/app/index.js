@@ -20,6 +20,7 @@ import {
 class App extends React.Component{
     render(){
         return(
+            
             <Router>
                 <div>
                  <Route exact path="/" component={Root} >    
@@ -31,6 +32,7 @@ class App extends React.Component{
                  <Route path="/sign" component={Sign}/>
                  </div>
             </Router>
+           
         )
     }
 }

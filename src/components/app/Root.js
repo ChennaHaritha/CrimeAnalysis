@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./header";
 import Home from "./home";
+import backStyle from "./styles/style1.css"
 
 class Root extends React.Component{
     render(){
         return(
-            <div>
+            <div className={backStyle.bodyStyle}>
                 <div>
                 <Header/>
                 </div>
