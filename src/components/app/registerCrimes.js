@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import crime1 from "./images/crime1.jpg";
 
 import {
@@ -27,7 +27,7 @@ const inputstyle={
     width:'400px'
 }
 
-class RegisterCrimes extends Component {
+class RegisterCrimes extends React.Component {
   render() {
     return (
       <div style={logincss} >

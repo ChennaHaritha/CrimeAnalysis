@@ -45,8 +45,25 @@ const divStyle = {
    'borderRadius': '10px',
    'marginTop': '15px',
    'paddingLeft': '15px',
+   'paddingTop': '5px',
+   'paddingBottom': '5px',
    'marginBottom': '15px'
    }
+
+   const locbutton = {
+    float:'right',
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    padding: '4px 10px',
+    cursor: 'pointer',
+    paddingRight: '20px',
+    paddingLeft: '20px',
+    borderRadius: '5px',
+    boarder:'50px',
+    
+    
+    
+};
 
 
 class Home extends React.Component {
@@ -56,6 +73,7 @@ class Home extends React.Component {
                <div className="row" style={rowMainStyling}>
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
+                            
                         </center>
                         <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
                 </div>
@@ -63,10 +81,27 @@ class Home extends React.Component {
 
                 <div className="row" >
                         <div className="col-md-8 " style={containerStyle}>
+                            <div >
+                                <button className=" float-right" style={locbutton}>Location</button>
+                                <br/>
+                                <hr/>
+                            </div>
                             <div className="row">
-                                <Card></Card>
-                                <Card></Card>
-                                <Card></Card>   
+                                <Card 
+                                    head="Heading"
+                                    desc="This is from home page"></Card>
+                                <Card 
+                                    head="Heading"
+                                    desc="This is from home page"></Card>
+                                <Card 
+                                    head="Heading"
+                                    desc="This is from home page"></Card>   
+                            </div>
+                            <div >
+                            <hr/>
+                                <button className=" float-right" style={locbutton}>View More ...</button>
+                                <br/>
+                                
                             </div>
                         </div>
 

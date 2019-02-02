@@ -1,21 +1,20 @@
 import React from "react";
 import Home from "./home";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
-import style1 from "./styles/style1.css";
 import RegisterCrime from "./registerCrimes";
 import Sign from "./sign";
-import Header from "./header";
 import Invest from "./invest";
 import Root from "./Root";
+import ViewMore from "./viewMore";
+import MoreDetails from "./MoreDetails"
+
 import {
     BrowserRouter as Router,
     Route,
     Switch,
     Redirect,
     
-} from 'react-router-dom'
-import { IndexRoute } from 'react-router';
-import Footer from "./footer";
+} from 'react-router-dom';
 
 
 class App extends React.Component{
@@ -23,13 +22,13 @@ class App extends React.Component{
         return(
             <Router>
                 <div>
-                 <Route exact path="/" component={Footer} >
-                 
-                    
-                    
+                 <Route exact path="/" component={Root} >    
                  </Route>
+                 <Route exact path="/moredetails" component={MoreDetails}/>
                  <Route path="/register" component={RegisterCrime} />
-                    <Route path="/analyze" component={Invest} />
+                 <Route path="/analyze" component={Invest} />
+                 <Route path="/viewMore" component={ViewMore} />
+                 <Route path="/sign" component={Sign}/>
                  </div>
             </Router>
         )

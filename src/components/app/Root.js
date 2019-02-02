@@ -12,6 +12,7 @@ class Root extends React.Component{
                 <div className="row">
                     <div className="col-md-12">
                         <Home></Home>
+                        
                     </div>
                 </div>
             </div>
