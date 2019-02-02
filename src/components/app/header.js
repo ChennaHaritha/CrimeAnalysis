@@ -65,7 +65,7 @@ class Header extends React.Component {
                  <div>  
                     <button style={button} >&#8249;</button>
                     <button style={button}>&#8250;</button>
-                    <button style={loginbutton} component={Link} to="/loginpage">Login</button>
+                    <button style={loginbutton} >Login</button>
                     
                 </div>
                 <div>

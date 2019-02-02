@@ -78,14 +78,14 @@ class Invest extends React.Component {
 <br/>
             <div className="row">
              <div className="col-md-4" >
-             <img src={robbery4} alt="Snow" class={sty.image} ></img>
+             <img src={robbery4} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
               <div style={centered} ></div>
               
              </div><br/>
 
              <div className="col-md-4">
-             <img src={missing} alt="Snow" class={sty.image} ></img>
+             <img src={missing} alt="Snow" style={image} ></img>
              <Button  style={buttonposition}>Analyse</Button>
               <div style={centered}></div>
              </div>

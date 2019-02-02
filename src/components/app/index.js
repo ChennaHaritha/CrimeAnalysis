@@ -6,6 +6,7 @@ import Sign from "./sign";
 import Invest from "./invest";
 import Root from "./Root";
 import ViewMore from "./viewMore";
+import MoreDetails from "./MoreDetails"
 
 import {
     BrowserRouter as Router,
