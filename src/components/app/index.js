@@ -15,6 +15,7 @@ import {
     
 } from 'react-router-dom'
 import { IndexRoute } from 'react-router';
+import Footer from "./footer";
 
 
 class App extends React.Component{
@@ -22,7 +23,7 @@ class App extends React.Component{
         return(
             <Router>
                 <div>
-                 <Route exact path="/" component={Root} >
+                 <Route exact path="/" component={Footer} >
                  
                     
                     
