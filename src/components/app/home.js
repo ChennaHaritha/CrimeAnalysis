@@ -3,6 +3,7 @@ import crime1 from "./images/crime1.jpg";
 import bargraph from "./images/bargraph.png";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import Card from "./card";
+import backStyle from "./styles/style1.css"
 
 const main= {
     margin:'30px'
@@ -69,7 +70,7 @@ const divStyle = {
 class Home extends React.Component {
     render() {
         return (
-            <div style={main}>     
+            <div style={main} className={backStyle.bodyStyle}  >   
                <div className="row" style={rowMainStyling}>
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
@@ -109,6 +110,7 @@ class Home extends React.Component {
                             <img className="card" src={bargraph} style={imgStyle}/>
                         </div>
                     </div>
+                    
                 </div>
             
 

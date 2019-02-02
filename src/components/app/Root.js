@@ -1,16 +1,17 @@
 import React from "react";
 import Header from "./header";
 import Home from "./home";
-import Footer from "./footer";
+import backStyle from "./styles/style1.css"
+import Footer from "./footer"
 
 const foot={
-    marginBottom:'20px',
+ marginBottom:'30px'
 }
 
 class Root extends React.Component{
     render(){
         return(
-            <div >
+            <div className={backStyle.bodyStyle}>
                 <div>
                 <Header/>
                 </div>
