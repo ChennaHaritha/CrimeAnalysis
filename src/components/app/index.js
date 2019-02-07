@@ -16,7 +16,7 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-
+import Maincomp from "./maincomp";
 
 class App extends React.Component{
     render(){
@@ -24,7 +24,7 @@ class App extends React.Component{
             
             <Router>
                 <div>
-                 <Route exact path="/" component={Root} >    
+                 <Route exact path="/" component={Home} >    
                  </Route>
                  <Route exact path="/moredetails" component={MoreDetails}/>
                  <Route path="/register" component={RegisterCrime} />

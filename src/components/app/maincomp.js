@@ -2,6 +2,8 @@ import React from "react";
 import crime1 from "./images/crime1.jpg";
 import {Link} from "react-router-dom";
 import Home from "./home";
+import gradient from "./images/gradient.jpg";
+import fingerprint3 from "./images/fingerprint3.jpg"
 
 const header={
   textAlign:'center',
@@ -18,22 +20,18 @@ const list={
   fontSize:'50px',
   marginLeft:'300px',
   marginTop:'150px'
-
-
-  
 }
 
 const back={
-  backgroundImage: 'url(' + crime1 + ')',
-  overflow:'hidden',
-  backgroundSize: 'cover',
- 
-  height:'500%'
-
-  
-}
-
-
+  width:'157%',
+  position: 'relative',
+  cursor:'pointer',
+  //backgroundImage: 'url(' + fingerprint3 + ')',
+  //backgroundImage: 'Linear-gradient( rgba(255,0,0,0), rgba(255,0,0,1))',
+   overflow:'hidden',
+   backgroundSize: 'cover',
+   height:'500%'
+  }
 
 
 
