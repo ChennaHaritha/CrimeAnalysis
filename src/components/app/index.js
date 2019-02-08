@@ -33,6 +33,7 @@ class App extends React.Component{
                  <Route path="/viewMore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
                  <Route path="/loginpage" component={Loginpage}/>
+
                  </div>
             </Router>
            

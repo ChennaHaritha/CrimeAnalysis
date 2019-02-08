@@ -12,14 +12,14 @@ const main= {
     minHeight:'70vh',
 }
 const heading={
-    fontSize: '100px',
+    fontSize: '90px',
     fontStyle:'oblique',
     color:'#8B0000',
     lineHeight: '40px',
     textAlign: 'center',
-  // marginLeft:'700px',
+  
     marginTop:'30px',
-    paddingBottom:'50px'
+    /*paddingBottom:'50px'*/
 }
 const marequeStyle={
     fontSize:'20px',
@@ -29,8 +29,8 @@ const marequeStyle={
 
 
 const rowMainStyling = {
-    marginTop: '10px'
-
+    marginTop: '50px'
+    
 }
 
 const imgStyle = {
@@ -48,8 +48,8 @@ const divStyle = {
    border: '3px solid #D3D3D3',
    'borderRadius': '10px',
    'marginTop': '15px',
-   'paddingLeft': '15px',
-   'paddingTop': '5px',
+    'paddingLeft': '5px',
+   'paddingRight': '5px',
    'paddingBottom': '5px',
    'marginBottom': '15px',
    minHeight:'50vh',
@@ -102,7 +102,9 @@ class Home extends React.Component {
                                     desc="This is from home page"></Card>
                                 <Card 
                                     head="Heading"
-                                    desc="This is from home page"></Card>   
+                                    desc="This is from home page"></Card> 
+                                
+
                             </div>
                             <div >
                             <hr/>
