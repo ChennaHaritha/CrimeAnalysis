@@ -16,7 +16,7 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-
+import Maincomp from "./maincomp";
 
 class App extends React.Component{
     render(){
