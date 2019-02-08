@@ -6,7 +6,10 @@ import Card from "./card";
 import backStyle from "./styles/style1.css"
 
 const main= {
-    margin:'30px'
+    marginTop:'40px',
+    marginLeft:'10px',
+    marginRight:'10px',
+    minHeight:'70vh',
 }
 const heading={
     fontSize: '100px',

@@ -8,7 +8,7 @@ import Root from "./Root";
 import ViewMore from "./viewMore";
 import MoreDetails from "./MoreDetails";
 import Footer from "./footer";
-
+import Maincomp from "./maincomp";
 import {
     BrowserRouter as Router,
     Route,
@@ -16,6 +16,7 @@ import {
     Redirect,
     
 } from 'react-router-dom';
+import Loginpage from "./loginpage";
 
 
 class App extends React.Component{
@@ -31,6 +32,7 @@ class App extends React.Component{
                  <Route path="/analyze" component={Invest} />
                  <Route path="/viewMore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
+                 <Route path="/loginpage" component={Loginpage}/>
                  </div>
             </Router>
            
