@@ -8,11 +8,16 @@ import {
 } from 'reactstrap';
 import Header from "./header";
 
+/*let grad1={
+  height: '100px',
+  backgroundcolor: 'red',  
+  backgroundimage: linear-gradient( red, yellow)  
+} */
 const logincss={
 Align:'center',
-marginTop:'30px'
-
-    
+marginTop:'30px',
+/*backgroundColor: 'coral'*/
+backgroundImage: 'linear-gradient(to right, red , yellow)'
 }
 const imgcontainer={
     textAlign: 'center',
@@ -31,6 +36,7 @@ class RegisterCrimes extends React.Component {
   render() {
     return (
       <div style={logincss} >
+    
         <Header></Header>
         <center>
           <Form className="form">
@@ -166,7 +172,7 @@ class RegisterCrimes extends React.Component {
               </fieldset>
             </Form>
           </center>
-          
+        
         </div>
     );
   }

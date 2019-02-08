@@ -71,7 +71,7 @@ class Header extends React.Component {
                  <div>  
                     <button style={button} >&#8249;</button>
                     <button style={button}>&#8250;</button>
-                    <button style={loginbutton} onClick={() => this.nextPath('/register') }>Login</button>
+                    <button style={loginbutton} onClick={() => this.nextPath('/loginpage.js') }>Login</button>
                     
                 </div>
                 <div>

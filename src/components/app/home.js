@@ -9,14 +9,15 @@ const main= {
     margin:'30px'
 }
 const heading={
-    fontSize: '100px',
+    fontSize: '80px',
     fontStyle:'oblique',
     color:'#8B0000',
     lineHeight: '40px',
     textAlign: 'center',
-    marginLeft:'300px',
+    /*paddingLeft:'500px',
+    paddingRight:'100px',*/
     marginTop:'30px',
-    paddingBottom:'50px'
+    /*paddingBottom:'50px'*/
 }
 const marequeStyle={
     fontSize:'20px',
@@ -26,13 +27,13 @@ const marequeStyle={
 
 
 const rowMainStyling = {
-    marginTop: '10px'
-
+    marginTop: '50px'
+    
 }
 
 const imgStyle = {
-    width:'100px',
-    height:'100px'
+    width:'500px',
+    height:'500px'
   };
  
 const divStyle = {
@@ -45,10 +46,10 @@ const divStyle = {
    border: '3px solid #D3D3D3',
    'borderRadius': '10px',
    'marginTop': '15px',
-   'paddingLeft': '15px',
-   'paddingTop': '5px',
+    'paddingLeft': '5px',
+   'paddingRight': '5px',
    'paddingBottom': '5px',
-   'marginBottom': '15px'
+   marginBottom: '100px'
    }
 
    const locbutton = {
@@ -70,17 +71,19 @@ const divStyle = {
 class Home extends React.Component {
     render() {
         return (
-            <div style={main} className={backStyle.bodyStyle}  >   
-               <div className="row" style={rowMainStyling}>
+            <div style={main}  >   
+               
+
+
+                <div className="row" >
+                   
+                    <div className="col-md-12" style={rowMainStyling}>
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
                             
                         </center>
                         <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
-                </div>
-
-
-                <div className="row" >
+                    </div>
                         <div className="col-md-8 " style={containerStyle}>
                             <div >
                                 <button className=" float-right" style={locbutton}>Location</button>
@@ -96,7 +99,9 @@ class Home extends React.Component {
                                     desc="This is from home page"></Card>
                                 <Card 
                                     head="Heading"
-                                    desc="This is from home page"></Card>   
+                                    desc="This is from home page"></Card> 
+                                
+
                             </div>
                             <div >
                             <hr/>
