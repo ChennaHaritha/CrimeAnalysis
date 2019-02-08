@@ -17,7 +17,7 @@ const heading={
     color:'#8B0000',
     lineHeight: '40px',
     textAlign: 'center',
-    marginLeft:'300px',
+  // marginLeft:'700px',
     marginTop:'30px',
     paddingBottom:'50px'
 }
@@ -34,8 +34,8 @@ const rowMainStyling = {
 }
 
 const imgStyle = {
-    width:'100px',
-    height:'100px'
+    width:'500px',
+    height:'500px'
   };
  
 const divStyle = {
@@ -51,7 +51,8 @@ const divStyle = {
    'paddingLeft': '15px',
    'paddingTop': '5px',
    'paddingBottom': '5px',
-   'marginBottom': '15px'
+   'marginBottom': '15px',
+   minHeight:'50vh',
    }
 
    const locbutton = {
@@ -73,13 +74,15 @@ const divStyle = {
 class Home extends React.Component {
     render() {
         return (
-            <div style={main} className={backStyle.bodyStyle}  >   
+            <div style={main}   >   
                <div className="row" style={rowMainStyling}>
+                  <div className="col-md-12">
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
                             
                         </center>
                         <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
+                    </div>
                 </div>
 
 

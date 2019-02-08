@@ -3,7 +3,7 @@ import Header from "./header";
 import Home from "./home";
 import backStyle from "./styles/style1.css"
 import Footer from "./footer";
-import Fingerprint from "./images/fingerprint2.jpeg"
+import Fingerprint from "./images/fingerprint1.jpg"
 import styled ,{keyframes} from 'styled-components'
 
 
@@ -25,15 +25,16 @@ const rootstyle={
     animation: 'mymove 5s infinite',
     animationDelay: '2s'
      */
-    animationName: '${coolBoxKeyframes}',
-  animationDuration: '2s',
-  animationTimingFunction: 'ease',
-  animationDelay: '3s',
+   /* animationName: '${coolBoxKeyframes}',
+   
   animationIterationCount: '1',
   animationDirection: 'normal',
   animationFillMode: 'forwards',
   animationPlayState: 'running',
+  */
   minHeight:'100vh',
+  
+ transition: 'opacity 60s ease-in-out', 
 }
 const coolBoxKeyframes = keyframes`
   0% {
@@ -50,7 +51,7 @@ const coolBoxKeyframes = keyframes`
 class Root extends React.Component{
     render(){
         return(
-            <div className={backStyle.bodyStyle} style={rootstyle}>
+            <div  style={rootstyle}>
                 <div>
                 <Header/>
                 </div>
