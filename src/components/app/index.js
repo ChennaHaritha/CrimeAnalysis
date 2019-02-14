@@ -15,6 +15,7 @@ import {
     Redirect,
     
 } from 'react-router-dom';
+import Chart from "./chart";
 
 
 class App extends React.Component{
