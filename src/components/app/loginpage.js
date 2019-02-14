@@ -1,5 +1,8 @@
 import React from "react";
 import crime1 from "./images/crime1.jpg";
+import Sign from "./sign";
+import {withRouter} from 'react-router-dom';
+
 
 import {
   Container, Col, Form,
@@ -61,7 +64,7 @@ class Loginpage extends React.Component {
               />
             </FormGroup>
           </Col>
-          <a href="#">Not a registered user Sign in</a>
+          <a href="/Sign">Not a registered user Sign in</a>
           <br />
           <Button>Login</Button>
           </fieldset>

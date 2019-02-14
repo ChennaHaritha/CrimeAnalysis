@@ -6,8 +6,9 @@ import Sign from "./sign";
 import Invest from "./invest";
 import Root from "./Root";
 import ViewMore from "./viewMore";
-import MoreDetails from "./MoreDetails"
-
+import MoreDetails from "./MoreDetails";
+import Footer from "./footer";
+import Maincomp from "./maincomp";
 import {
     BrowserRouter as Router,
     Route,
@@ -15,7 +16,11 @@ import {
     Redirect,
     
 } from 'react-router-dom';
+<<<<<<< HEAD
 import Chart from "./chart";
+=======
+import Loginpage from "./loginpage";
+>>>>>>> 2192789a4ec19d842aa951af93a43c06c7bd8baa
 
 
 class App extends React.Component{
@@ -31,6 +36,8 @@ class App extends React.Component{
                  <Route path="/analyze" component={Invest} />
                  <Route path="/viewMore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
+                 <Route path="/loginpage" component={Loginpage}/>
+
                  </div>
             </Router>
            

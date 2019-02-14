@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {withRouter} from 'react-router-dom';
+import Loginpage from "./loginpage";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,
@@ -60,8 +61,8 @@ class Header extends React.Component {
     /*onLogin(){
         this.props.history.push("/register");
     }*/
-    nextPath(path) {
-        history.push(path);
+    nextPath = (path) => {
+        this.props.history.push(path);
         console.log("hello")
       }
     
@@ -71,7 +72,7 @@ class Header extends React.Component {
                  <div>  
                     <button style={button} >&#8249;</button>
                     <button style={button}>&#8250;</button>
-                    <button style={loginbutton} onClick={() => this.nextPath('/register') }>Login</button>
+                    <button style={loginbutton} onClick={() => this.nextPath('Loginpage') }>Login</button>
                     
                 </div>
                 <div>
@@ -105,5 +106,5 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);
     

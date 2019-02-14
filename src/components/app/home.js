@@ -6,17 +6,20 @@ import Card from "./card";
 import backStyle from "./styles/style1.css"
 
 const main= {
-    margin:'30px'
+    marginTop:'40px',
+    marginLeft:'10px',
+    marginRight:'10px',
+    minHeight:'70vh',
 }
 const heading={
-    fontSize: '100px',
+    fontSize: '90px',
     fontStyle:'oblique',
     color:'#8B0000',
     lineHeight: '40px',
     textAlign: 'center',
-    marginLeft:'300px',
+  
     marginTop:'30px',
-    paddingBottom:'50px'
+    /*paddingBottom:'50px'*/
 }
 const marequeStyle={
     fontSize:'20px',
@@ -26,13 +29,13 @@ const marequeStyle={
 
 
 const rowMainStyling = {
-    marginTop: '10px'
-
+    marginTop: '50px'
+    
 }
 
 const imgStyle = {
-    width:'100px',
-    height:'100px'
+    width:'500px',
+    height:'500px'
   };
  
 const divStyle = {
@@ -45,10 +48,11 @@ const divStyle = {
    border: '3px solid #D3D3D3',
    'borderRadius': '10px',
    'marginTop': '15px',
-   'paddingLeft': '15px',
-   'paddingTop': '5px',
+    'paddingLeft': '5px',
+   'paddingRight': '5px',
    'paddingBottom': '5px',
-   'marginBottom': '15px'
+   'marginBottom': '15px',
+   minHeight:'50vh',
    }
 
    const locbutton = {
@@ -70,13 +74,15 @@ const divStyle = {
 class Home extends React.Component {
     render() {
         return (
-            <div style={main} className={backStyle.bodyStyle}  >   
+            <div style={main}   >   
                <div className="row" style={rowMainStyling}>
+                  <div className="col-md-12">
                         <center>
                             <p style={heading}>CRIME ANALYSIS</p>
                             
                         </center>
                         <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
+                    </div>
                 </div>
 
 
@@ -96,7 +102,9 @@ class Home extends React.Component {
                                     desc="This is from home page"></Card>
                                 <Card 
                                     head="Heading"
-                                    desc="This is from home page"></Card>   
+                                    desc="This is from home page"></Card> 
+                                
+
                             </div>
                             <div >
                             <hr/>
@@ -110,6 +118,7 @@ class Home extends React.Component {
                             <img className="card" src={bargraph} style={imgStyle}/>
                         </div>
                     </div>
+                    
                 </div>
             
 
