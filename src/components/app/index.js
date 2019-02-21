@@ -16,11 +16,9 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-<<<<<<< HEAD
-import Chart from "./chart";
-=======
 import Loginpage from "./loginpage";
->>>>>>> 2192789a4ec19d842aa951af93a43c06c7bd8baa
+import Bargraph from "./charts";
+
 
 
 class App extends React.Component{
@@ -34,7 +32,7 @@ class App extends React.Component{
                  <Route exact path="/moredetails" component={MoreDetails}/>
                  <Route path="/register" component={RegisterCrime} />
                  <Route path="/analyze" component={Invest} />
-                 <Route path="/viewMore" component={ViewMore} />
+                 <Route path="/viewmore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
                  <Route path="/loginpage" component={Loginpage}/>
 
