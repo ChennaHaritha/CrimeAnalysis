@@ -7,6 +7,8 @@ import {withRouter} from 'react-router-dom';
 import Bargraph from './charts'
 import backStyle from "./styles/style1.css";
 import { BarChart } from "react-easy-chart";
+import {CardColumns} from "reactstrap";
+import Cards from "./card";
 
 const main= {
     marginTop:'40px',
@@ -99,19 +101,13 @@ class Home extends React.Component {
                                 <br/>
                                 <hr/>
                             </div>
-                            <div className="row">
-                                <Card 
-                                    head="Heading"
-                                    desc="This is from home page"></Card>
-                                <Card 
-                                    head="Heading"
-                                    desc="This is from home page"></Card>
-                                <Card 
-                                    head="Heading"
-                                    desc="This is from home page"></Card> 
-                                
-
+                            
+                            <div>
+                              <CardColumns>
+                                 <Cards/> 
+                              </CardColumns>
                             </div>
+                            
                             <div >
                             <hr/>
                                 <button className=" float-right" onClick={()=> this.nextPath('viewmore')}style={locbutton}>View More ...</button>
