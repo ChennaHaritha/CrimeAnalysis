@@ -30,6 +30,7 @@ class App extends React.Component{
                  <Route exact path="/" component={Root} >    
                  </Route>
                  <Route exact path="/moredetails" component={MoreDetails}/>
+                 <Route exact path="/maincomponent" component={Maincomp}/>
                  <Route path="/register" component={RegisterCrime} />
                  <Route path="/analyze" component={Invest} />
                  <Route path="/viewmore" component={ViewMore} />

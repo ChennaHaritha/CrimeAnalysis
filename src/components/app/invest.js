@@ -45,12 +45,18 @@ const centered={
     left:'20%', 
     fontSize:'150%'
   }
+ 
   
   
 
 class Invest extends React.Component {
-    render() {
-        return (
+
+  nextPath=(path) =>{
+    this.props.history.push(path);
+}
+   
+  render() {
+      return (
           <div>
             <div >
               <Header></Header>
@@ -67,21 +73,22 @@ class Invest extends React.Component {
             
              <div className="col-md-4" >
              <img src={robbery4} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered} ></div>
+             <div style={centered} ></div>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
+             
               
              </div>
 
              <div className="col-md-4">
              <img src={missing} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered}></div>
+             <div style={centered}></div>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
              </div>
 
              <div className="col-md-4">
              <img src={murder} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered}></div>
+             <div style={centered}></div>
+              <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
              </div>
             </div>
 
@@ -93,19 +100,19 @@ class Invest extends React.Component {
             <div className="row">
              <div className="col-md-4">
              <img src={stolen} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div><br/>
 
              <div className="col-md-4">
              <img src={rape1} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div>
 
              <div className="col-md-4">
              <img src={cybercrime1} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div>
              </div>
