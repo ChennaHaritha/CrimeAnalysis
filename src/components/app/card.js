@@ -34,7 +34,7 @@ class Card extends React.Component{
 
       componentDidMount() {
         //const url = "http://10.10.200.12:9000/foods"; 
-        const url = "http://localhost:9000/allnews"; 
+        const url = "http://localhost:9000/newsFeed"; 
         let headers = new Headers();
 
         headers.append('Content-Type', 'application/json');
@@ -65,11 +65,11 @@ class Card extends React.Component{
                           
                             
                             <div className="card" style={divStyle}>
-                                <h2>{Card.name}</h2>
+                                <h2>{Card.crimetype}</h2>
                                 <img className="card-img-top" src={crime1} style={imgStyle}/>
                                 <div className="card-body">
-                                    <h6 className="card-title">{Card.location}</h6>
-                                    <p className="card-text">{Card.info}</p>
+                                    <h6 className="card-title">{Card.city}</h6>
+                                    <p className="card-text">{Card.description}</p>
                                    
                                 </div>
                                 <Button onClick={this.onButtonChange}>View more</Button> 

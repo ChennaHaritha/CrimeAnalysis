@@ -40,7 +40,7 @@ class Sign extends Component {
     this.validateForm = this.validateForm.bind(this);
 
     //
-    
+  
     this.state = {
       name: "",
       email:"",
