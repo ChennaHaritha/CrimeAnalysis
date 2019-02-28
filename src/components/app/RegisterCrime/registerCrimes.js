@@ -1,12 +1,12 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
   Button,
 } from 'reactstrap';
-import Header from "./header";
+import Header from "../Root/header";
 
 
 

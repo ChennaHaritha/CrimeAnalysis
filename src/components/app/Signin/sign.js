@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 import {Route,Router} from "react-router-dom";
 import Loginpage from "./loginpage";
 

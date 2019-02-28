@@ -1,9 +1,8 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 import {Link} from "react-router-dom";
-import Home from "./home";
-import gradient from "./images/gradient.jpg";
-import fingerprint3 from "./images/fingerprint3.jpg"
+import gradient from "../images/gradient.jpg";
+import Header from "../Root/header"
 
 const header={
   textAlign:'center',
@@ -38,7 +37,9 @@ const back={
 class Maincomp extends React.Component {
     render() {
       return (
+        
         <div style={back} >
+        <Header></Header>
           <div className="row">
             <h1 style={header}> ROBBERY</h1>
             <button style={button}>Map view</button>

@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {withRouter} from 'react-router-dom';
-import Loginpage from "./loginpage";
+import Loginpage from "../Signin/loginpage";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,

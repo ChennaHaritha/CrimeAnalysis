@@ -1,14 +1,14 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
-import bargraph from "./images/bargraph.png";
+import crime1 from "../images/crime1.jpg";
+import bargraph from "../images/bargraph.png";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
-import Card from "./card";
+import Card from "../Allcards/card";
 import {withRouter} from 'react-router-dom';
-import Bargraph from './charts'
-import backStyle from "./styles/style1.css";
+import Bargraph from '../charts'
+import backStyle from "../styles/style1.css";
 import { BarChart } from "react-easy-chart";
 import {CardColumns} from "reactstrap";
-import Cards from "./card";
+import Cards from "../Allcards/card";
 
 const main= {
     marginTop:'40px',

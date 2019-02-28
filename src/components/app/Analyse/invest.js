@@ -1,14 +1,14 @@
 import React from 'react';
-import robbery4 from "./images/robbery4.jpg";
-import crime1 from "./images/crime1.jpg";
-import missing from "./images/missing.jpeg";
-import murder from "./images/murder.jpeg";
-import stolen from "./images/stolen.jpeg";
-import rape1 from "./images/rape1.jpg";
-import cybercrime1 from "./images/cybercrime1.jpg";
+import robbery4 from "../images/robbery4.jpg";
+import crime1 from "../images/crime1.jpg";
+import missing from "../images/missing.jpeg";
+import murder from "../images/murder.jpeg";
+import stolen from "../images/stolen.jpeg";
+import rape1 from "../images/rape1.jpg";
+import cybercrime1 from "../images/cybercrime1.jpg";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col, Container } from 'reactstrap';
-import Header from './header';
+import Header from '../Root/header';
 
 
 const heading={

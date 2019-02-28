@@ -1,5 +1,5 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 import {  CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
     import {withRouter} from 'react-router-dom';
