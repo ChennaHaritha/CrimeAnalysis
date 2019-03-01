@@ -1,14 +1,14 @@
 import React from 'react';
-import robbery4 from "./images/robbery4.jpg";
-import crime1 from "./images/crime1.jpg";
-import missing from "./images/missing.jpeg";
-import murder from "./images/murder.jpeg";
-import stolen from "./images/stolen.jpeg";
-import rape1 from "./images/rape1.jpg";
-import cybercrime1 from "./images/cybercrime1.jpg";
+import robbery4 from "../images/robbery4.jpg";
+import crime1 from "../images/crime1.jpg";
+import missing from "../images/missing.jpeg";
+import murder from "../images/murder.jpeg";
+import stolen from "../images/stolen.jpeg";
+import rape1 from "../images/rape1.jpg";
+import cybercrime1 from "../images/cybercrime1.jpg";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col, Container } from 'reactstrap';
-import Header from './header';
+import Header from '../Root/header';
 
 
 const heading={
@@ -45,12 +45,18 @@ const centered={
     left:'20%', 
     fontSize:'150%'
   }
+ 
   
   
 
 class Invest extends React.Component {
-    render() {
-        return (
+
+  nextPath=(path) =>{
+    this.props.history.push(path);
+}
+   
+  render() {
+      return (
           <div>
             <div >
               <Header></Header>
@@ -67,21 +73,22 @@ class Invest extends React.Component {
             
              <div className="col-md-4" >
              <img src={robbery4} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered} ></div>
+             <div style={centered} ></div>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
+             
               
              </div>
 
              <div className="col-md-4">
              <img src={missing} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered}></div>
+             <div style={centered}></div>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
              </div>
 
              <div className="col-md-4">
              <img src={murder} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
-              <div style={centered}></div>
+             <div style={centered}></div>
+              <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
              </div>
             </div>
 
@@ -93,19 +100,19 @@ class Invest extends React.Component {
             <div className="row">
              <div className="col-md-4">
              <img src={stolen} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div><br/>
 
              <div className="col-md-4">
              <img src={rape1} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div>
 
              <div className="col-md-4">
              <img src={cybercrime1} alt="Snow" style={image} ></img>
-             <Button  style={buttonposition}>Analyse</Button>
+             <Button className=" float-right" onClick={()=> this.nextPath('maincomponent')}style={buttonposition}> Analyse</Button>
               <div style={centered}></div>
              </div>
              </div>

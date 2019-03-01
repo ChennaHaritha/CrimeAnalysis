@@ -1,5 +1,5 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 
 const divStyle = {
     width:'200px',

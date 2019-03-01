@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./header";
 import Home from "./home";
-import backStyle from "./styles/style1.css"
+import backStyle from "../styles/style1.css"
 import Footer from "./footer";
-import Fingerprint from "./images/fingerprint1.jpg"
+import Fingerprint from "../images/fingerprint1.jpg"
 import styled ,{keyframes} from 'styled-components'
 
 

@@ -1,14 +1,13 @@
 import React from "react";
-import Home from "./home";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
-import RegisterCrime from "./registerCrimes";
-import Sign from "./sign";
-import Invest from "./invest";
-import Root from "./Root";
-import ViewMore from "./viewMore";
+
+import RegisterCrime from "./RegisterCrime/registerCrimes";
+import Sign from "./Signin/sign";
+import Invest from "./Analyse/invest";
+import Root from "./Root/Root";
+import ViewMore from "./Allcards/viewMore";
 import MoreDetails from "./MoreDetails";
-import Footer from "./footer";
-import Maincomp from "./maincomp";
+import Maincomp from "./Analyse/maincomp";
 import {
     BrowserRouter as Router,
     Route,
@@ -16,8 +15,8 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-import Loginpage from "./loginpage";
-import Bargraph from "./charts";
+import Loginpage from "./Signin/loginpage";
+
 
 
 
@@ -30,6 +29,7 @@ class App extends React.Component{
                  <Route exact path="/" component={Root} >    
                  </Route>
                  <Route exact path="/moredetails" component={MoreDetails}/>
+                 <Route exact path="/maincomponent" component={Maincomp}/>
                  <Route path="/register" component={RegisterCrime} />
                  <Route path="/analyze" component={Invest} />
                  <Route path="/viewmore" component={ViewMore} />

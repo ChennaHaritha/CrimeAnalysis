@@ -1,6 +1,6 @@
 import React from "react";
 import BroadCard from "./broadcard";
-import Header from "./header";
+import Header from "../Root/header";
 import Card from "./card";
 
 class ViewMore extends React.Component{

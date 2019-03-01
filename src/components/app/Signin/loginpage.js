@@ -1,5 +1,5 @@
 import React from "react";
-import crime1 from "./images/crime1.jpg";
+import crime1 from "../images/crime1.jpg";
 import Sign from "./sign";
 import {withRouter} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
@@ -43,13 +43,26 @@ class Loginpage extends React.Component {
   }
   handleSubmit(event) {
 
+    
     body = {
       name: this.state.name,
       password: this.state.password,
     }
+   /* if(body.name=='null' && (!body.password)){
+      alert('please enter the user name and password');
+    }
+    */
+    if(!body.name){
+       alert('please enter the user name');
+    }
+    else if(!body.password){
+      alert('please enter the password');
+    }
+    else {
     console.log(body)
     console.log(body.password)
     console.log(body.name)
+    
     const url = "http://localhost:9000/login?name="+body.name+"&password="+body.password;
     
     console.log(url)
@@ -74,15 +87,15 @@ class Loginpage extends React.Component {
           .then(contents => {console.log(contents);
           
                 localStorage.setItem("AccessToken",contents.accessToken);
-                let path=`loggedin`
-          this.props.history.push('/root');
-                            
+                let path=`logged in`
+          this.props.history.push('/');
+           //console.log(contents.accessToken)                 
       })
           .catch(()=> console.log("can't access" + url + "response. "))
           
-
+     
       }
-
+    }
   
 
   validateForm() {
@@ -100,6 +113,7 @@ class Loginpage extends React.Component {
 
   handleNameChange(event) {
     this.setState({ name: event.target.value})
+    console.log(event.target.value)
   }
 
   render() {
@@ -114,10 +128,10 @@ class Loginpage extends React.Component {
              <img src={crime1} alt="Avatar" style={avatar}></img>
                </div>
           <Col>
-            <FormGroup onChnage={this.handleNameChange}>
+            <FormGroup onChange={this.handleNameChange}>
               <Label>Enter Username</Label>
               <Input
-                type="name"
+                type="text"
                 name="name"
                 id="examplename"
                 placeholder="username"
