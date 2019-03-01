@@ -79,7 +79,7 @@ class Sign extends Component {
     body = {
       name: this.state.name,
       password: this.state.password,
-
+      email: this.state.email,
      //confirmPassword: this.state.confirmPassword,
     }
     console.log(body);
