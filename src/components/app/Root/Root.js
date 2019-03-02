@@ -5,6 +5,8 @@ import backStyle from "../styles/style1.css"
 import Footer from "./footer";
 import Fingerprint from "../images/fingerprint1.jpg"
 import styled ,{keyframes} from 'styled-components'
+import LoggedHeader from "./LoggedHeader";
+
 
 
 const foot={
@@ -53,7 +55,10 @@ class Root extends React.Component{
         return(
             <div  style={rootstyle}>
                 <div>
-                <Header/>
+                {
+              ((localStorage.getItem("AccessToken") == null )?(<Header/>):(<LoggedHeader/>))
+            }
+               
                 </div>
                 <div className="row" >
                     <div className="col-md-12">
