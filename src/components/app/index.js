@@ -16,6 +16,7 @@ import {
     
 } from 'react-router-dom';
 import Loginpage from "./Signin/loginpage";
+import SearchDetails from "./Allcards/searchDetails";
 
 
 
@@ -35,6 +36,7 @@ class App extends React.Component{
                  <Route path="/viewmore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
                  <Route path="/loginpage" component={Loginpage}/>
+                 <Route path="/searchbytype" component={SearchDetails}/>
 
                  </div>
             </Router>

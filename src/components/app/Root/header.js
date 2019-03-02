@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {withRouter} from 'react-router-dom';
 import Loginpage from "../Signin/loginpage";
+import SearchDetails from "../Allcards/searchDetails";
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,
@@ -52,6 +53,11 @@ const loginbutton = {
 const main= {
     margin:'30px'
 };
+const imgStyle = {
+        width:'100px',
+        height:'100px',
+        float:'right'
+      };
 
 
 
@@ -65,8 +71,36 @@ class Header extends React.Component {
         this.props.history.push(path);
         console.log("hello")
       }
+
+      constructor(props){
+        super(props);
+        this.onButtonClick =this.onButtonClick.bind(this)
+        this.handleChange =this.handleChange.bind(this)
+        this.state = {
+          data : [{ }]
+        }
+      }
+      onButtonClick() {     
+        let name=this.state.search
+        console.log(name);
+        <SearchDetails name={this.state.name}/>
+       let path=`searchbytype`;
+       this.props.history.push({
+          pathname: path,
+          state: {
+           name:name
+          }
+         });
+           
+    }
+
+    handleChange(e) {
+      this.setState({search: e.target.value});
+   }
+
     
     render() {
+        
         return (
             <div>  
                  <div>  
@@ -90,11 +124,11 @@ class Header extends React.Component {
                                 </NavItem>
                                 <NavItem className="navbar-nav ml-auto" >
                                     <form className="navbar-form" action="/action_page.php" >                
-                                        <input type="text" className="form-control" placeholder="Search" style={{marginLeft:'20px'}}/>
+                                        <input type="text" name="search" className="form-control" placeholder="Search" style={{marginLeft:'20px'}} onChange={this.handleChange}/>
                                      </form>
                                 </NavItem>
                                 <NavItem>
-                                    <button type="submit" style={{marginLeft:'30px'}}className="btn btn-outline-success my-2 my-sm-0">Submit</button>
+                                    <button type="submit" style={{marginLeft:'30px'}}className="btn btn-outline-success my-2 my-sm-0"onClick={this.onButtonClick}>Submit</button>
                                 </NavItem>
                             </Nav>
                         </Collapse>
