@@ -16,7 +16,7 @@ const foot={
  textAlign:'center',
 }
 const rootstyle={
-    backgroundImage: 'url(' + Fingerprint + ')',
+    /*backgroundImage: 'url(' + Fingerprint + ')',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100% 100%',
     /*

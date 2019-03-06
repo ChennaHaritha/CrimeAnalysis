@@ -10,6 +10,9 @@ import { BarChart } from "react-easy-chart";
 import {CardColumns} from "reactstrap";
 import Cards from "../Allcards/card";
 
+import Slider from "../Allcards/Caurosel";
+
+
 const main= {
     marginTop:'40px',
     marginLeft:'10px',
@@ -61,7 +64,6 @@ const divStyle = {
    }
 
    const locbutton = {
-    float:'right',
     backgroundColor: '#4CAF50',
     color: 'white',
     padding: '4px 10px',
@@ -70,11 +72,38 @@ const divStyle = {
     paddingLeft: '20px',
     borderRadius: '5px',
     boarder:'50px',
+    marginLeft:'20px'
     
     
     
 };
 
+
+/*
+
+<div >
+                                <button className=" float-right" style={locbutton}>Location</button>
+                                <br/>
+                                <hr/>
+                            </div>
+                            
+                            <Slider></Slider>
+                           
+                            
+                            <div >
+                            <hr/>
+                                <button className=" float-right" onClick={()=> this.nextPath('viewmore')}style={locbutton}>View More ...</button>
+                                <br/>
+                                
+                            </div>
+It is at line no 106
+ <div>
+                              <CardColumns>
+                                 <Cards/> 
+                              </CardColumns>
+                            </div> 
+
+*/
 
 class Home extends React.Component {
     nextPath=(path) =>{
@@ -96,24 +125,19 @@ class Home extends React.Component {
 
                 <div className="row" >
                         <div className="col-md-8 " style={containerStyle}>
-                            <div >
-                                <button className=" float-right" style={locbutton}>Location</button>
-                                <br/>
-                                <hr/>
-                            </div>
+                        
                             
-                            <div>
-                              <CardColumns>
-                                 <Cards/> 
-                              </CardColumns>
-                            </div>
+                            <Slider></Slider>
+                            
                             
                             <div >
                             <hr/>
+                            <button className=" float-left" style={locbutton}>Location</button>
                                 <button className=" float-right" onClick={()=> this.nextPath('viewmore')}style={locbutton}>View More ...</button>
                                 <br/>
                                 
                             </div>
+                            
                         </div>
 
                         <div className="col-md-4">

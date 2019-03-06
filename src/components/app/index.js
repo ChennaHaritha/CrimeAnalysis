@@ -8,6 +8,10 @@ import Root from "./Root/Root";
 import ViewMore from "./Allcards/viewMore";
 import MoreDetails from "./MoreDetails";
 import Maincomp from "./Analyse/maincomp";
+import Loginpage from "./Signin/loginpage";
+
+
+
 import {
     BrowserRouter as Router,
     Route,
@@ -15,7 +19,6 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-import Loginpage from "./Signin/loginpage";
 
 
 
@@ -43,12 +46,5 @@ class App extends React.Component{
     }
 }
 
-/*const App = () => (
-    <div className="mainDiv" style={style1}>
-        <Home></Home>
-        <Sign></Sign>
-        <RegisterCrime></RegisterCrime>
-    </div>
-);*/
 
 export default App;

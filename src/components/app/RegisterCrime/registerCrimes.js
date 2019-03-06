@@ -1,5 +1,6 @@
 import React from "react";
 import crime1 from "../images/crime1.jpg";
+import stone from "../images/Stone.jpg"
 
 import {
   Container, Col, Form,
@@ -14,15 +15,53 @@ import Header from "../Root/header";
   height: '100px',
   backgroundcolor: 'red',  
   backgroundimage: linear-gradient( red, yellow)  
+  backgroundImage: 'linear-gradient(to right, red , yellow)'
 } */
 const logincss={
-Align:'center',
-marginTop:'30px',
-/*backgroundColor: 'coral'*/
-backgroundImage: 'linear-gradient(to right, red , yellow)'
+  width: '50%',
+	height: '1390px',
+  background: 'transparent',
+	color: 'white',
+	top: '75%',
+  left: '40%',
+  marginbottom:'3%',
+	position: 'absolute',
+	transform: 'translate(-50%,-50%)',
+	boxSizing: 'border-box',
+	padding: '70px 30px',
+  boxShadow: '3px 3px  5px 5px #2c322c',
+ 
+  //borderRadius: '10px 10px',
+
 }
+const pageStyle={
+  backgroundImage: 'url(' + stone+ ')',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%',
+  
+  
+}
+
+const legendStyle={
+  color:'red',
+  fontSize: '30px',
+
+}
+
+const submitcss={
+  width:'90%',
+  border: 'none',
+	outline: 'none',
+	height: '40px',
+	background: 'red',
+	color: 'white',
+	fontSize: '18px',
+	borderRadius: '20px',
+    boxShadow: '3px 3px  grey',
+}
+
 const imgcontainer={
-    textAlign: 'center',
+  textAlign: 'center',
     margin: '24px 0 12px 0'
   }
   const avatar= {
@@ -31,7 +70,29 @@ const imgcontainer={
     borderRadius: '360px'
   }
 const inputstyle={
-    width:'400px'
+    width:'90%',
+    //Border: 'none',
+    borderBottom: '2px solid cream',
+    borderTop:'0px',
+    borderLeft:'0px',
+    borderRight:'0px',
+	  background: 'transparent',
+	  //outline: 'none',
+	  height: '40px',
+	  color: 'white',
+	  fontSize: '20px',
+    //borderRadius: '5px 5px',
+    //boxShadow: '3px 3px lightgrey' ,
+}
+
+const labelStyle={
+  textAlign: 'left',
+  //float:'left',
+  marginLeft:'20px',
+	
+  fontSize: '22px',
+  color:'white'
+  
 }
 var body;
 
@@ -70,9 +131,12 @@ class RegisterCrimes extends React.Component {
   }
 
   handleCrimetypeChange = event => {
+    
     this.setState({
       crimetype: event.target.value
+    
     });
+    
   }
 
   handleYearChange = event => {
@@ -120,6 +184,7 @@ class RegisterCrimes extends React.Component {
 
 
   handleSubmit(event) {
+    
     event.preventDefault();
     body = {
 
@@ -133,6 +198,21 @@ class RegisterCrimes extends React.Component {
     
     }
     console.log(body);
+    if(this.state.crimetype==""){
+      alert('Please enter the type of crime')
+
+    }
+    else if(this.state.year==""){
+      alert('Please enter the year of commiting the crime')
+    }
+    else if(this.state.city==""){
+      alert('Please enter the city of commiting crime')
+    }
+    else if(this.state.description==""){
+      alert('Please enter the description of crime commited')
+    }
+    else{
+    
 
   const url = "http://localhost:9000/registerCrime";
     let headers = new Headers();
@@ -155,28 +235,33 @@ class RegisterCrimes extends React.Component {
                       
  })
  .catch(()=> console.log("can't access" + url + "response. "))
+
+
+ alert('Details are submitted successful');
  
   }
+}
 
 
 
 
   render() {
     return (
-      <div style={logincss} >
-    
+      <div style={pageStyle} >
+        <div > 
         <Header></Header>
-        <center>
-          <Form className="form" className="form" onSubmit={this.handleSubmit }>
-              <fieldset>
-                <legend><h2>RegisterCrimes</h2></legend>
+       
+        <div>
+          <Form className="form" onSubmit={this.handleSubmit }>
+              <div style={logincss}>
+                <center><legend><h2 style={legendStyle}>RegisterCrimes</h2></legend></center>
           
                   <div style={imgcontainer}>
                     <img src={crime1} alt="Avatar" style={avatar}/>
                   </div>
                   <Col>
                 <FormGroup>
-                  <Label>CrimeType</Label>
+                  <Label style={labelStyle}>CrimeType</Label>
                   <Input
                     type="name"
                     name="name"
@@ -190,7 +275,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Year</Label>
+                  <Label style={labelStyle}>Year</Label>
                   <Input
                     type="name"
                     name="name"
@@ -204,7 +289,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Gender</Label>
+                  <Label style={labelStyle}>Gender</Label>
                   <Input
                     type="name"
                     name="name"
@@ -218,7 +303,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Age</Label>
+                  <Label style={labelStyle}>Age</Label>
                   <Input
                     type="name"
                     name="name"
@@ -232,7 +317,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>City</Label>
+                  <Label style={labelStyle}>City</Label>
                   <Input
                     type="name"
                     name="name"
@@ -246,7 +331,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>No.of People Affected</Label>
+                  <Label style={labelStyle}>No.of People Affected</Label>
                   <Input
                     type="name"
                     name="name"
@@ -260,7 +345,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>TimeOfDay</Label>
+                  <Label style={labelStyle}>TimeOfDay</Label>
                   <Input
                     type="name"
                     name="name"
@@ -273,7 +358,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Lat,Lon</Label>
+                  <Label style={labelStyle}>Lat,Lon</Label>
                   <Input
                     type="name"
                     name="name"
@@ -285,7 +370,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Description</Label>
+                  <Label style={labelStyle}>Description</Label>
                   <Input
                     type="name"
                     name="name"
@@ -299,7 +384,7 @@ class RegisterCrimes extends React.Component {
               </Col>
               <Col>
                 <FormGroup>
-                  <Label>Suspects</Label>
+                  <Label style={labelStyle}>Suspects</Label>
                   <Input
                     type="name"
                     name="name"
@@ -313,11 +398,11 @@ class RegisterCrimes extends React.Component {
               </Col>
               
               <br />
-              <Button onClick = {this.handleSubmit} type="submit">Submit</Button>
-              </fieldset>
+              <Button onClick = {this.handleSubmit} type="submit" style={submitcss}>Submit</Button>
+              </div>
             </Form>
-          </center>
-        
+          </div>
+        </div>
         </div>
     );
   }
