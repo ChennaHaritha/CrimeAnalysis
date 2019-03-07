@@ -123,6 +123,7 @@ class Loginpage extends React.Component {
     body = {
       name: this.state.name,
       password: this.state.password,
+      
     }
    /* if(body.name=='null' && (!body.password)){
       alert('please enter the user name and password');
@@ -135,7 +136,7 @@ class Loginpage extends React.Component {
       alert('please enter the password');
     }
     else {
-    console.log(body)
+    //console.log(body)
     console.log(body.password)
     console.log(body.name)
     
@@ -161,17 +162,26 @@ class Loginpage extends React.Component {
           })
           .then(response => response.json())
           .then(contents => {console.log(contents);
+            
+            
+          localStorage.setItem("AccessToken",contents.token);
+          console.log(localStorage.getItem("AccessToken"))
           
-                localStorage.setItem("AccessToken",contents.accessToken);
-                let path=`logged in`
+               
+          let path=`logged in`
           this.props.history.push('/');
-           //console.log(contents.accessToken)                 
+           
+           
       })
           .catch(()=> console.log("can't access" + url + "response. "))
-          
      
       }
+      
+
+
+
     }
+    
   
 
   validateForm() {

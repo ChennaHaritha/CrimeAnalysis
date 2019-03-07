@@ -19,6 +19,11 @@ import {
     Redirect,
     
 } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import Loginpage from "./Signin/loginpage";
+import SearchDetails from "./Allcards/searchDetails";
+>>>>>>> 54867053ac71d5025f01f7aadbff58c0835ea34c
 
 
 
@@ -38,6 +43,7 @@ class App extends React.Component{
                  <Route path="/viewmore" component={ViewMore} />
                  <Route path="/sign" component={Sign}/>
                  <Route path="/loginpage" component={Loginpage}/>
+                 <Route path="/searchbytype" component={SearchDetails}/>
 
                  </div>
             </Router>

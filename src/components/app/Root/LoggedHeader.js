@@ -62,16 +62,12 @@ const imgStyle = {
 
 
 
-      let buttonname;
+     
 
-class Header extends React.Component {
+class LoggedHeader extends React.Component {
 
 
     
-    nextPath = (path) => {
-        this.props.history.push(path);
-        console.log("hello")
-      }
 
       constructor(props){
         super(props);
@@ -98,11 +94,40 @@ class Header extends React.Component {
     handleChange(e) {
       this.setState({search: e.target.value});
    }
-   
+   handleLogout(event){
+   // event.preventDefault();
+    body = { token: localStorage.getItem("AccessToken") }
+    console.log(localStorage.getItem("AccessToken"))
+          
+    
+     
+        const url = "http://localhost:9000/logout?token=" +localStorage.getItem("AccessToken");
+        console.log( url )
+        let headers = new Headers();
+     
+        headers.append('Content-Type','application/json');
+        headers.append('Accept','application/json');
+     
+        headers.append('Access-Control-Allow-origin',url);
+        headers.append('Access-Control-Allow-Credentials','true');
+     
+        headers.append('PUT','GET');
+     
+        fetch(url, {
+           headers:headers,
+           method: 'PUT',
+           body: JSON.stringify(body)
+        })
+        .then(response => {})
+        .then(contents => {localStorage.removeItem("AccessToken")
+                          
+     })
+     .catch(()=> console.log("can't access" + url + "response. "))
+     //this.props.history.push('/');
+      }
 
 
-       
-   
+     
 
     
     render() {
@@ -114,11 +139,11 @@ class Header extends React.Component {
                     <button style={button} >&#8249;</button>
                     <button style={button}>&#8250;</button>
                     
-                        <button style={loginbutton} onClick={() => this.nextPath('Loginpage') }>Login</button>
+                        
 
                     
                     
-                     
+                        <button style={loginbutton} onClick={this.handleLogout }>Logout</button>
 
                     
                     
@@ -133,7 +158,12 @@ class Header extends React.Component {
                                 <NavItem>
                                     <NavLink href="/" >Home</NavLink>
                                 </NavItem>
-                                
+                                <NavItem>
+                                    <NavLink href="/register">Register Crime</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/analyze">Analyze</NavLink>
+                                </NavItem>
                                 <NavItem className="navbar-nav ml-auto" >
                                     <form className="navbar-form" action="/action_page.php" >                
                                         <input type="text" name="search" className="form-control" placeholder="Search" style={{marginLeft:'20px'}} onChange={this.handleChange}/>
@@ -152,5 +182,5 @@ class Header extends React.Component {
     }
 }
 
-export default withRouter(Header);
+export default withRouter(LoggedHeader);
     

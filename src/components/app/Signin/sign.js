@@ -89,16 +89,6 @@ const entireBlockStyle={
     Align:'center'
   }
 
-  
-  
-
-
-
-
-
-
-  
-
 var body;
 
 class Sign extends Component {
