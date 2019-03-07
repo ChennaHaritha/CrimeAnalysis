@@ -8,7 +8,7 @@ import rape1 from "../images/rape1.jpg";
 import cybercrime1 from "../images/cybercrime1.jpg";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col, Container } from 'reactstrap';
-import Header from '../Root/header';
+import LoggedHeader from '../Root/LoggedHeader';
 
 
 const heading={
@@ -59,7 +59,7 @@ class Invest extends React.Component {
       return (
           <div>
             <div >
-              <Header></Header>
+              <LoggedHeader></LoggedHeader>
               <h1 style={heading}>CRIME DETAILS</h1>
               <br/>
               

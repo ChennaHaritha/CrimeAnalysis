@@ -4,6 +4,8 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
 import {CardColumns} from "reactstrap";
 import crime1 from "../images/crime1.jpg";
+import LoggedHeader from "../Root/LoggedHeader";
+import Header from "../Root/header"
 
 const imgStyle = {
     width:'100px',
@@ -22,16 +24,24 @@ class SearchDetails extends React.Component {
 
     constructor(props){
         super(props);
-        name=(this.props.location.state.name)
+        
         console.log(name)
         this.state = {
-          data : []
+          data : [],
+          name: this.props.location.state.name,
         }
       }
     
     componentDidMount() {
         console.log("hello")
-    
+        this.requestData(this.state.name);
+      }
+
+    handleSubmit = (name) => {
+        this.requestData(name);
+    }
+    requestData(name) {
+
         const url = "http://localhost:9000/crimedetails?crimetype="+name;
         console.log(url) 
         let headers = new Headers();
@@ -54,13 +64,21 @@ class SearchDetails extends React.Component {
                             data : contents})
             })
         .catch(() => console.log("Can’t access " + url + " response. "))
-      }
-
+    }
 
     render() {
        
         return (
-            <div className="row" >   
+            <div>
+                <div>
+                {
+              ((localStorage.getItem("AccessToken") == null )?(<Header onSubmit={this.handleSubmit}/>):(<LoggedHeader onSubmit={this.handleSubmit} />))
+            }
+               
+                </div>
+                
+            <div className="row" >  
+             
             <div className="col-md-6 " >{this.state.data.map((RegisterCrime,index) =>{
                         return(
                           <div key={index}>
@@ -80,6 +98,7 @@ class SearchDetails extends React.Component {
                           
                         )           
             })}
+            </div>
             </div>
             </div>
              

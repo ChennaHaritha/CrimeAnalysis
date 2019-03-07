@@ -7,7 +7,7 @@ import {
   FormGroup, Label, Input,
   Button,
 } from 'reactstrap';
-import Header from "../Root/header";
+import LoggedHeader from "../Root/LoggedHeader";
 
 
 
@@ -249,7 +249,7 @@ class RegisterCrimes extends React.Component {
     return (
       <div style={pageStyle} >
         <div > 
-        <Header></Header>
+        <LoggedHeader></LoggedHeader>
        
         <div>
           <Form className="form" onSubmit={this.handleSubmit }>

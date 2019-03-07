@@ -19,11 +19,8 @@ import {
     Redirect,
     
 } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import Loginpage from "./Signin/loginpage";
+
 import SearchDetails from "./Allcards/searchDetails";
->>>>>>> 54867053ac71d5025f01f7aadbff58c0835ea34c
 
 
 

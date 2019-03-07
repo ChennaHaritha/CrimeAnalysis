@@ -62,16 +62,12 @@ const imgStyle = {
 
 
 
-      let buttonname;
+     
 
 class Header extends React.Component {
 
 
     
-    nextPath = (path) => {
-        this.props.history.push(path);
-        console.log("hello")
-      }
 
       constructor(props){
         super(props);
@@ -81,28 +77,37 @@ class Header extends React.Component {
           data : [{ }]
         }
       }
-      onButtonClick() {     
-        let name=this.state.search
-        console.log(name);
-        <SearchDetails name={this.state.name}/>
-       let path=`searchbytype`;
-       this.props.history.push({
-          pathname: path,
-          state: {
-           name:name
-          }
-         });
-           
+      onButtonClick (e) {
+          e.preventDefault();
+        
+        let name=this.state.search;
+        console.log("history:",this.props.history);
+        if((this.props.location.pathname)=='/searchbytype'){
+        this.props.onSubmit(name);   
+        }
+        else {
+            let path=`searchbytype`;
+            this.props.history.push({
+                pathname: path,
+                state: {
+                 name:name
+                }
+               });
+              }
+    
     }
 
     handleChange(e) {
       this.setState({search: e.target.value});
    }
-   
 
-
+   nextpath = (path) => {
+       this.props.history.push(path);
        
+   }
    
+
+     
 
     
     render() {
@@ -112,19 +117,11 @@ class Header extends React.Component {
             <div>  
                  <div>  
                     <button style={button} >&#8249;</button>
-                    <button style={button}>&#8250;</button>
+                    <button style={button}>&#8250;</button>    
                     
-                        <button style={loginbutton} onClick={() => this.nextPath('Loginpage') }>Login</button>
+                        <button style={loginbutton} onClick={() => this.nextpath('Loginpage')}>Login</button>
 
-                    
-                    
-                     
-
-                    
-                    
-                    
-                   
-                    
+                        
                 </div>
                 <div>
                     <Navbar color="dark" light expand="md">
@@ -140,7 +137,7 @@ class Header extends React.Component {
                                      </form>
                                 </NavItem>
                                 <NavItem>
-                                    <button type="submit" style={{marginLeft:'30px'}}className="btn btn-outline-success my-2 my-sm-0"onClick={this.onButtonClick}>Submit</button>
+                                    <button type="submit" style={{marginLeft:'30px'}} className="btn btn-outline-success my-2 my-sm-0" onClick={this.onButtonClick}>Submit</button>
                                 </NavItem>
                             </Nav>
                         </Collapse>

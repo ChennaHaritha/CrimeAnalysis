@@ -1,9 +1,11 @@
 import React from "react";
 import BroadCard from "./broadcard";
-import Header from "../Root/header";
+
 import Card from "./card";
 import crime1 from "../images/crime1.jpg";
 import {CardColumns} from "reactstrap";
+import LoggedHeader from "../Root/LoggedHeader";
+import Header from "../Root/header"
 
 /*
 
@@ -89,7 +91,14 @@ class ViewMore extends React.Component{
         return(
             <div>
                 <div>
-                <Header/>
+                
+                {
+              ((localStorage.getItem("AccessToken") == null )?(<Header/>):(<LoggedHeader/>))
+                }
+               
+               
+                
+                
                 </div>
                 <div className="row">
                     <div className="col-md-12">

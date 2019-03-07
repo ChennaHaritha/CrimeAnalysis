@@ -3,6 +3,7 @@ import crime1 from "../images/crime1.jpg";
 import {Link} from "react-router-dom";
 import gradient from "../images/gradient.jpg";
 import Header from "../Root/header"
+import LoggedHeader from "../Root/LoggedHeader";
 
 const header={
   textAlign:'center',
@@ -39,7 +40,7 @@ class Maincomp extends React.Component {
       return (
         
         <div style={back} >
-        <Header></Header>
+        <LoggedHeader></LoggedHeader>
           <div className="row">
             <h1 style={header}> ROBBERY</h1>
             <button style={button}>Map view</button>
