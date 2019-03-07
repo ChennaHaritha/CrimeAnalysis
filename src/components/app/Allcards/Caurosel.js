@@ -8,7 +8,7 @@ import CarouselCaption from "react-bootstrap/CarouselCaption";
 
 const imgStyle ={
     
-    width:1200,
+    width:1600,
     height:550,
   
 }

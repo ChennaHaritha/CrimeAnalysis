@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import crime1 from "../images/crime1.jpg";
+import crime1 from "../images/log.png";
 import {Route,Router} from "react-router-dom";
 import Loginpage from "./loginpage";
+import stone from "../images/Stone.jpg"
 
 import {
   Container, Col, Form,
@@ -9,23 +10,94 @@ import {
   Button,
 } from 'reactstrap';
 
+const legendStyle={
+  color:'maroon',
+  fontSize: '30px',
+  marginTop:'-10%',
+  Align:'center'
+}
+const pageStyle={
+  backgroundImage: 'url(' + stone+ ')',
+}
+
+const submitcss={
+  width:'80%',
+  border: 'none',
+	outline: 'none',
+	height: '40px',
+	background: 'red',
+	color: 'black',
+	fontSize: '20px',
+	borderRadius: '20px',
+  boxShadow: '3px 3px  grey',
+  marginTop:'12%'
+}
+
 const logincss={
-Align:'center',
-marginTop:'150px'
+  width: '50%',
+	height: '800px',
+  background: 'transparent',
+	color: 'red',
+	top: '30%',
+  left: '40%',
+  marginbottom:'3%',
+	position: 'absolute',
+	transform: 'translate(-50%,-50%)',
+	boxSizing: 'border-box',
+	padding: '70px 30px',
+  boxShadow: '3px 3px  5px 5px #2c322c',
+  Align:'center',
+  marginTop:'200px'
+  //borderRadius: '10px 10px',
+}
+const labelStyle={
+  textAlign: 'left',
+  //float:'left',
+  marginLeft:'20px',
+	
+  fontSize: '22px',
+  
+}
+const entireBlockStyle={
+  marginTop:'20%'
+}
+  
+   const avatar= {
+      /*width: '300px',
+      Height: '300px',
+      borderRadius: '360px'*/
+    width: '200px',
+	  height: '200px',
+	  borderRadius: '50%',
+	  position: 'absolute',
+	  top: '-120px',
+    left: 'calc(45% - 45px)',
+    marginbottom:'50px'
+   
+    }
+  const inputstyle={
     
-}
-const imgcontainer={
-    textAlign: 'center',
-    margin: '24px 0 12px 0'
+    width:'80%',
+    borderBottom: '2px solid cream',
+    borderTop:'0px',
+    borderLeft:'0px',
+    borderRight:'0px',
+	  background: 'transparent',
+	  height: '40px',
+	  color: 'black',
+    fontSize: '20px',
+    Align:'center'
   }
-  const avatar= {
-    width: '300px',
-    Height: '300px',
-    borderRadius: '360px'
-  }
-const inputstyle={
-    width:'400px'
-}
+
+  
+  
+
+
+
+
+
+
+  
 
 var body;
 
@@ -79,7 +151,7 @@ class Sign extends Component {
     body = {
       name: this.state.name,
       password: this.state.password,
-
+      email: this.state.email,
      //confirmPassword: this.state.confirmPassword,
     }
     console.log(body);
@@ -114,18 +186,19 @@ class Sign extends Component {
 
   render() {
     return (
-      <div style={logincss} >
-      <center>
+      <div style={pageStyle} >
+      
       <Form className="form" onSubmit={this.handleSubmit } >
-          <fieldset>
-        <legend><h2>SIGN IN</h2></legend>
-       
-        <div style={imgcontainer}>
+      <div style={logincss}>
+          <div style={entireBlockStyle}>
+        <center><legend><h2 style={legendStyle}>SIGN IN</h2></legend></center>
+       <br></br>
+        <div >
              <img src={crime1} alt="Avatar" style={avatar}></img>
                </div>
                <Col>
             <FormGroup>
-              <Label>Enter Name</Label>
+              <Label style={labelStyle}>Enter Name</Label>
               <Input
                 type="name"
                 name="name"
@@ -140,7 +213,7 @@ class Sign extends Component {
          
           <Col>
             <FormGroup>
-              <Label>Enter Email</Label>
+              <Label style={labelStyle}>Enter Email</Label>
               <Input
                 type="email"
                 name="email"
@@ -154,7 +227,7 @@ class Sign extends Component {
           </Col>
           <Col>
             <FormGroup>
-              <Label for="examplePassword">Enter Password</Label>
+              <Label style={labelStyle} for="examplePassword">Enter Password</Label>
               <Input
                 type="password"
                 name="password"
@@ -168,10 +241,11 @@ class Sign extends Component {
           </Col>
           
           <br />
-          <Button onClick = {this.handleSubmit} type="submit" >Submit</Button>
-          </fieldset>
+          <center><Button onClick = {this.handleSubmit} type="submit" style={submitcss}>Submit</Button></center>
+          </div>
+          </div>
         </Form>
-        </center>
+       
       </div>
     );
   }
