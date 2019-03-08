@@ -80,12 +80,14 @@ class SearchDetails extends React.Component {
             <div className="row" >  
              
             <div className="col-md-6 " >{this.state.data.map((RegisterCrime,index) =>{
+                let url="http://localhost:9000/images?id="+RegisterCrime.urls[0];
+
                         return(
                           <div key={index}>
                           
                            <div className="card" style={divStyle} >
                                 
-                                <img className="card-img-top" src={crime1} style={imgStyle}/>
+                                <img className="card-img-top" src={url} style={imgStyle}/>
                                 <div className="card-body">
                                     <h4 className="card-title">{RegisterCrime.crimetype}</h4>
                                     <h6 className="card-title">{RegisterCrime.city}</h6>
