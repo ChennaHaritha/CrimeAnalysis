@@ -61,7 +61,7 @@ let linkedin={
 
 const pagefooter={
   
-  backgroundColor:'Gray'
+  backgroundColor:'#B7E9F7'
 }
 const unorderedlist={
   textAlign:'center',
