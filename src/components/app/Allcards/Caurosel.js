@@ -20,7 +20,7 @@ const carouselStyle= {
   
   const MyCarousel = ({ items }) => (
     <div className="root">
-      <Carousel controls={false}>
+      <Carousel controls={true}>
         {items.map((item, i) =>
                    <Carousel.Item key={i}>
                       <a className="thumbnail" href="javascript:void(0)">

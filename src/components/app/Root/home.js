@@ -11,6 +11,7 @@ import {CardColumns} from "reactstrap";
 import Cards from "../Allcards/card";
 
 import Slider from "../Allcards/Caurosel";
+import Marquee from "./Marquee";
 
 
 const main= {
@@ -79,32 +80,6 @@ const divStyle = {
 };
 
 
-/*
-
-<div >
-                                <button className=" float-right" style={locbutton}>Location</button>
-                                <br/>
-                                <hr/>
-                            </div>
-                            
-                            <Slider></Slider>
-                           
-                            
-                            <div >
-                            <hr/>
-                                <button className=" float-right" onClick={()=> this.nextPath('viewmore')}style={locbutton}>View More ...</button>
-                                <br/>
-                                
-                            </div>
-It is at line no 106
- <div>
-                              <CardColumns>
-                                 <Cards/> 
-                              </CardColumns>
-                            </div> 
-
-*/
-
 class Home extends React.Component {
     nextPath=(path) =>{
         this.props.history.push(path);
@@ -118,7 +93,9 @@ class Home extends React.Component {
                             <p style={heading}>CRIME ANALYSIS</p>
                             
                         </center>
-                        <marquee >Most commited crimes in Kukatpally<span className="badge">5</span></marquee>
+
+                       <Marquee></Marquee>
+
                     </div>
                 </div>
 

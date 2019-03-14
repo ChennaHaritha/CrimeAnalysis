@@ -23,6 +23,10 @@ import {
 import SearchDetails from "./Allcards/searchDetails";
 
 
+import Bargraph from "./charts";
+
+
+
 
 
 class App extends React.Component{
