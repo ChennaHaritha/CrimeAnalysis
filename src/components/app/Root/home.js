@@ -23,11 +23,11 @@ const main= {
 const heading={
     fontSize: '90px',
     fontStyle:'oblique',
-    color:'#8B0000',
+    color:'#2E5894',
     lineHeight: '40px',
     textAlign: 'center',
-  
     marginTop:'30px',
+    textShadow: '4px 4px 7px #0794DB'
     /*paddingBottom:'50px'*/
 }
 const marequeStyle={
@@ -65,7 +65,8 @@ const divStyle = {
    }
 
    const locbutton = {
-    backgroundColor: '#4CAF50',
+    /*backgroundColor: '#4CAF50',*/
+    backgroundColor:'hsl(0, 70%, 50%)',
     color: 'white',
     padding: '4px 10px',
     cursor: 'pointer',
